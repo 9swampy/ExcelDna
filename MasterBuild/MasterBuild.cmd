@@ -22,24 +22,24 @@ cd %rootPath%\ExcelDna\Build
 call BuildPackages.bat %PackageVersion% %DllVersion% %MSBuildPath%
 @if errorlevel 1 goto end
 
-cd %rootPath%\Registration\Build
-copy /Y %targetsfile% %rootPath%\Registration\Source\Directory.Build.targets
-call BuildPackages.bat %PackageVersion% %DllVersion% %MSBuildPath%
-@if errorlevel 1 goto end
-
-cd %rootPath%\IntelliSense\Build
-copy /Y %targetsfile% %rootPath%\IntelliSense\Source\Directory.Build.targets
-call BuildPackages.bat %PackageVersion% %DllVersion% %MSBuildPath%
-@if errorlevel 1 goto end
-
-cd %rootPath%\ExcelDnaDoc\Build
-copy /Y %targetsfile% %rootPath%\ExcelDnaDoc\Directory.Build.targets
-call BuildPackages.bat %PackageVersion% %DllVersion% %MSBuildPath%
-@if errorlevel 1 goto end
-
-cd %rootPath%\DeveloperTools\ExcelDna.Testing\Build
-copy /Y %targetsfile% %rootPath%\DeveloperTools\ExcelDna.Testing\Directory.Build.targets
-call BuildPackages.bat %PackageVersion% %DllVersion% %MSBuildPath%
-@if errorlevel 1 goto end
+REM cd %rootPath%\Registration\Build
+REM copy /Y %targetsfile% %rootPath%\Registration\Source\Directory.Build.targets
+REM call BuildPackages.bat %PackageVersion% %DllVersion% %MSBuildPath%
+REM @if errorlevel 1 goto end
+REM 
+REM cd %rootPath%\IntelliSense\Build
+REM copy /Y %targetsfile% %rootPath%\IntelliSense\Source\Directory.Build.targets
+REM call BuildPackages.bat %PackageVersion% %DllVersion% %MSBuildPath%
+REM @if errorlevel 1 goto end
+REM 
+REM cd %rootPath%\ExcelDnaDoc\Build
+REM copy /Y %targetsfile% %rootPath%\ExcelDnaDoc\Directory.Build.targets
+REM call BuildPackages.bat %PackageVersion% %DllVersion% %MSBuildPath%
+REM @if errorlevel 1 goto end
+REM 
+REM cd %rootPath%\DeveloperTools\ExcelDna.Testing\Build
+REM copy /Y %targetsfile% %rootPath%\DeveloperTools\ExcelDna.Testing\Directory.Build.targets
+REM call BuildPackages.bat %PackageVersion% %DllVersion% %MSBuildPath%
+REM @if errorlevel 1 goto end
 
 :end
